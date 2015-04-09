@@ -80,11 +80,12 @@ def getImages(data, f):
 
 def saveImages():
     images_dir = 'images'
-    zukulento = False
+    #nsfw controls the rating filter of the images
+    nsfw = False
     makeDir(images_dir)
     current_json = call()
-    url_list = getImages(current_json, zukulento)
-    name_list = getNames(current_json, zukulento)
+    url_list = getImages(current_json, nsfw)
+    name_list = getNames(current_json, nsfw)
 
     m = len(name_list)
     i = 0
